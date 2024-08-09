@@ -4,6 +4,7 @@ import "./payment.css";
 import alphaletelogo from "../../assets/alphalete-logo.png";
 import googleico from "../../assets/google.svg";
 import paypal from "../../assets/paypal.svg";
+import isymbol from "../../assets/i_symbol.png";
 import visaico from "../../assets/visa.svg";
 import mastercardico from "../../assets/mastercard.svg";
 import masterredcardico from "../../assets/redmaster.svg";
@@ -25,7 +26,7 @@ const payment = () => {
               </div>
 
               <div className="flex justify-center items-center">
-                <p className="text-center text-[#707070] text-[14px] font-light">
+                <p className="text-center text-[#707070] text-[13px] font-normal">
                   Express checkout
                 </p>
               </div>
@@ -345,7 +346,7 @@ const payment = () => {
           <div className="checkout-main w-[604px] ">
             <div className="p-[38px] checkout-inside">
               {/* Product Summary Section */}
-              <div className="flex space-x-4 p-4 border-b">
+              <div className="flex space-x-4 ">
                 {/* Product Image */}
                 <div className="w-16 h-16">
                   {/* Add your image here */}
@@ -367,26 +368,27 @@ const payment = () => {
               </div>
 
               {/* Rewards Reminder Section */}
-              <div className="flex items-center space-x-2 p-4 bg-gray-100 rounded-md mt-4">
-                <div className="text-gray-600">
+              <div className="dont-miss flex items-center space-x-2 p-4 bg-gray-100 rounded-md mt-4">
+                <div className="text-gray-600 flex flex-wrap justify-center items-center gap-3">
                   {/* Icon for information */}
-                  <svg
-                    className="w-5 h-5 inline-block mr-2"
+                  {/* <svg
+                    class="w-10 h-10 inline-block mr-2"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#777777"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                       d="M13 16h-1v-4h-1m1-4h.01M12 18a6 6 0 110-12 6 6 0 010 12z"
                     ></path>
-                  </svg>
+                  </svg> */}
+                  <Image src={isymbol} alt="isymbol"></Image>
                   <span className="text-[15px]">
                     Don&apos;t miss out!{" "}
-                    <a href="#" className="text-blue-600 font-semibold">
+                    <a href="#" className="text-blue-600 link">
                       Log in
                     </a>{" "}
                     to earn and redeem rewards

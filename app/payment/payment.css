@@ -21,16 +21,27 @@ body {
 .payment-main {
   width: 710px;
   border-right: 1px solid #dedede;
-}.payment-insde{
+}
+.payment-insde {
   max-width: 660px;
-}.checkout-main{
+}
+.checkout-main {
   width: 604px;
-}.checkout-inside{
+}
+.checkout-inside {
   position: sticky;
   top: 0;
   right: auto;
   left: auto;
   bottom: 0;
+  max-width: 520px;
+}
+.dont-miss {
+  border: 1px solid #e2e2e2;
+}
+.circle {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1.4px;
 }
 .or-sec {
   position: relative;
@@ -38,7 +49,26 @@ body {
   align-items: center;
   text-align: center; /* Ensure text alignment in the center */
 }
+.link{
+  color: #868686 !important;
+  text-decoration: underline;
 
+}
+.link:focus{
+  color: #868686;
+  text-decoration: underline;
+
+}
+.link:hover{
+  color: #868686;
+  text-decoration: underline;
+
+}
+.link{
+  color: #868686;
+  text-decoration: underline;
+
+}
 .or-sec::before,
 .or-sec::after {
   content: "";
