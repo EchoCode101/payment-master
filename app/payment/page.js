@@ -6,6 +6,10 @@ import googleico from "../../assets/google.svg";
 import paypal from "../../assets/paypal.svg";
 import paypalWhite from "../../assets/paypal-white.svg";
 import locksymbol from "../../assets/locksymbol1.png";
+import elo from "../../assets/elo.svg";
+import discover from "../../assets/discover.svg";
+import bank from "../../assets/bank.svg";
+import unionpay from "../../assets/unionpay.svg";
 import isymbol from "../../assets/i_symbol.png";
 import shopImg from "../../assets/shop-img.png";
 import phoneImage from "../../assets/phoneImage.png";
@@ -222,8 +226,10 @@ const payment = () => {
 
               {/* News and Offers Section */}
               <div className="flex items-center space-x-2 mb-4 border border-gray-300 p-2 rounded-md">
-                <input type="checkbox" className="border-gray-100 h-4 w-4" />
-                <span className="text-sm">Text me with news and offers</span>
+                <label className="text-[13px] flex items-center gap-3 space-x-2">
+                  <input type="checkbox" className="border-gray-100 h-4 w-4" />
+                  Text me with news and offers
+                </label>
               </div>
 
               {/* Shipping Method Section */}
@@ -248,11 +254,17 @@ const payment = () => {
                 {/* Payment Options Section */}
                 <div className="mt-4">
                   {/* Credit Card Option */}
-                  <div className="flex items-center space-x-2 p-4 border rounded-md">
-                    <input type="radio" name="payment" className="h-4 w-4" />
+                  <div className="flex items-center space-x-2 p-4 rounded-md1  ">
                     <div className="flex justify-between w-full">
-                      <span>Credit card</span>
-                      <div className="flex items-center space-x-2">
+                      <label className="cursor-pointer text-[13px] flex items-center gap-3 space-x-2">
+                        <input
+                          type="radio"
+                          name="payment"
+                          className="h-4 w-4"
+                        />
+                        Credit card
+                      </label>
+                      <div className="flex items-center space-x-2 hover-div relative">
                         {/* Add your icons here */}
                         <Image src={visaico} alt="Visa" className="h-5" />
                         <Image
@@ -266,17 +278,78 @@ const payment = () => {
                           className="h-5"
                         />
                         <Image src={bluecard} alt="BlueCard" className="h-5" />
-                        {/* <Image src="amex.png" alt="Amex" className="h-5" /> */}
-                        <span>+4</span>
+                        <span className="four-plus ps-2 pe-2 text-gray-500 rounded-md">
+                          +4
+                        </span>
+                        <div className="four-plus-div flex flex-wrap items-center ps-3 pe-3 rounded-md">
+                          <Image src={elo} alt="BlueCard" className="h-5" />
+                          <Image src={bank} alt="BlueCard" className="h-5" />
+                          <Image
+                            src={discover}
+                            alt="BlueCard"
+                            className="h-5"
+                          />
+                          <Image
+                            src={unionpay}
+                            alt="BlueCard"
+                            className="h-5"
+                          />
+                        </div>
                       </div>
+                    </div>
+                  </div>
+                  <div className="mobile-phone-div flex flex-col  pt-5 pb-4">
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      className="border ms-[17px] me-[17px] border-gray-300 w-[545px] in-p mobile-phone-input rounded-md pl-5"
+                      placeholder="Mobile phone number"
+                    />
+                    <Image
+                      className="phoneImage"
+                      src={phoneImage}
+                      alt="phoneImage"
+                    ></Image>
+                    <div className="ps-5 pe-5">
+                      <p className="text-red text-[13px] pt-3">
+                        The specified phone number does not match the expected
+                        pattern.
+                      </p>
+                      <p className="text-gray-500 text-[13px] pt-4 pe-5">
+                        Next time you check out here or on other stores powered
+                        by Shopify, you’ll receive a code by text message to
+                        securely purchase with Shop Pay.
+                      </p>
+                      <p className="text-gray-500 text-[12px] pt-5 flex felx-wrap">
+                        By continuing, you agree to Shop Pay’s&nbsp;
+                        <a href="#" className="flex items-center gap-1">
+                          <ins>Privacy Policy</ins>
+                          <Image src={shareSymbol} alt="shareSymbol"></Image>
+                        </a>
+                        &nbsp; and &nbsp;
+                        <a href="#" className="flex items-center gap-1">
+                          <ins>Terms of Service</ins>
+                          <span>
+                            <Image src={shareSymbol} alt="shareSymbol"></Image>
+                          </span>
+                        </a>
+                        .
+                      </p>
                     </div>
                   </div>
 
                   {/* PayPal Option */}
-                  <div className="flex items-center space-x-2 p-4 border rounded-md mt-4 bg-gray-100">
-                    <input type="radio" name="payment" className="h-4 w-4" />
+                  <div className="flex items-center space-x-2 p-4 border rounded-md ">
                     <div className="flex justify-between w-full">
-                      <span>PayPal</span>
+                      <label className="cursor-pointer text-[13px] flex items-center gap-3 space-x-2">
+                        <input
+                          type="radio"
+                          name="payment"
+                          className="h-4 w-4"
+                        />
+                        PayPal
+                      </label>
                       <div class="w-[100px] h-[20px]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -337,22 +410,24 @@ const payment = () => {
                   <div className="input-heading text-black text-[1rem] mt-4">
                     REMEMBER ME
                   </div>
-                  <div className="flex flex-wrap flex-col items-start justify-center mb-4 border border-gray-300 pt-[17px] rounded-md ">
-                    <div className="flex items-center space-x-2 mb-4 ps-[17px] pe-[17px]">
-                      <input
-                        type="checkbox"
-                        className="border-gray-100 h-4 w-4"
-                      />
-                      <span className="text-[13px]">
+                  <div className="flex flex-wrap flex-col items-start justify-center mb-4 border border-gray-300 pt-[17px] rounded-md">
+                    <div className="">
+                      <label className="cursor-pointer text-[13px] flex items-center gap-3 space-x-2 mb-4 ps-[17px] pe-[17px]">
+                        <input
+                          type="checkbox"
+                          className="border-gray-100 h-4 w-4 save-num-chk"
+                          id="save-num-chk"
+                        />
                         Save my information for a faster checkout
-                      </span>
+                      </label>
                     </div>
-                    <div className="flex flex-col bg-gray mobile-phone-div pt-5 pb-4 ">
+
+                    <div className="mobile-phone-div flex flex-col bg-gray pt-5 pb-4">
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
-                        className="border ms-[17px] me-[17px] border-gray-300 w-[545px] in-p  mobile-phone-input rounded-md pl-5 "
+                        className="border ms-[17px] me-[17px] border-gray-300 w-[545px] in-p mobile-phone-input rounded-md pl-5"
                         placeholder="Mobile phone number"
                       />
                       <Image
@@ -370,7 +445,7 @@ const payment = () => {
                           powered by Shopify, you’ll receive a code by text
                           message to securely purchase with Shop Pay.
                         </p>
-                        <p className="text-gray-500 text-[12px] pt-5 flex felx-wrap ">
+                        <p className="text-gray-500 text-[12px] pt-5 flex felx-wrap">
                           By continuing, you agree to Shop Pay’s&nbsp;
                           <a href="#" className="flex items-center gap-1">
                             <ins>Privacy Policy</ins>
@@ -391,6 +466,7 @@ const payment = () => {
                       </div>
                     </div>
                   </div>
+
                   <div className="flex justify-between  items-center">
                     <div className="flex justify-start gap-2 items-center">
                       <Image src={locksymbol} alt="locksymbol"></Image>
