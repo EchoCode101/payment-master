@@ -11,6 +11,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 .input-heading {
   font-family: "Syncopate", sans-serif;
@@ -37,11 +39,18 @@ body {
   max-width: 520px;
 }
 .dont-miss {
-  border: 1px solid #e2e2e2;
+  border: 1px solid #dfdfdf;
+  background-color: #f6f6f6;
 }
 .circle {
   vector-effect: non-scaling-stroke;
   stroke-width: 1.4px;
+}
+.discount-input {
+  font-size: 0.9rem;
+  font-weight: 300;
+  background-color: #ffffff;
+  padding: 15px 10px !important;
 }
 .or-sec {
   position: relative;
@@ -49,25 +58,113 @@ body {
   align-items: center;
   text-align: center; /* Ensure text alignment in the center */
 }
-.link{
+.link {
   color: #868686 !important;
   text-decoration: underline;
-
 }
-.link:focus{
+.link:focus {
   color: #868686;
   text-decoration: underline;
-
 }
-.link:hover{
+.link:hover {
   color: #868686;
   text-decoration: underline;
-
 }
-.link{
+.buy-img-div {
+  position: relative;
+}
+.img-border {
+  border: 1px solid #e2e2e2;
+}
+.num-circle {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0000007c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.num-circle span {
+  color: white;
+  font-size: 12px;
+}
+.apply-btn {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
   color: #868686;
-  text-decoration: underline;
-
+  border: 1px solid #dfdfdf !important;
+  background-color: #f6f6f6;
+}
+input:focus,
+input:active,
+input:focus-visible,
+select:focus,
+select:active,
+select:focus-visible {
+  outline: 1px solid #868686 !important;
+}
+.drop-down-div {
+  position: relative;
+}
+.select-tag {
+  padding: 21px 30px 6px 11px;
+}
+.country-span {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+.in-p {
+  padding: 15px 10px !important;
+}
+.in-p::placeholder {
+  color: rgb(55, 55, 55);
+}
+.paypal-btn {
+  background-color: #0070ba;
+}
+.paypalWhite {
+  width: 80px;
+}
+.text-red {
+  color: red;
+}
+.mobile-phone-div {
+  background-color: #f4f4f4;
+  position: relative;
+  border-top: 1px solid #dedede;
+}
+.mobile-phone-input {
+  padding-left: 35px !important;
+  background-color: #f4f4f4;
+}
+.mobile-phone-input:focus,
+.mobile-phone-input:active,
+.mobile-phone-input:focus-visible {
+  border: 1px solid red;
+}
+.phoneImage {
+  position: absolute;
+  top: 35px;
+  left: 28px;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+.review-order-btn {
+  color: white;
+  background-color: black;
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 .or-sec::before,
 .or-sec::after {

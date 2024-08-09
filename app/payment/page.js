@@ -4,7 +4,12 @@ import "./payment.css";
 import alphaletelogo from "../../assets/alphalete-logo.png";
 import googleico from "../../assets/google.svg";
 import paypal from "../../assets/paypal.svg";
+import paypalWhite from "../../assets/paypal-white.svg";
+import locksymbol from "../../assets/locksymbol1.png";
 import isymbol from "../../assets/i_symbol.png";
+import shopImg from "../../assets/shop-img.png";
+import phoneImage from "../../assets/phoneImage.png";
+import shareSymbol from "../../assets/shareSymbol.png";
 import visaico from "../../assets/visa.svg";
 import mastercardico from "../../assets/mastercard.svg";
 import masterredcardico from "../../assets/redmaster.svg";
@@ -92,11 +97,15 @@ const payment = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="border border-gray-300 rounded-md p-2 w-full"
+                  className="border border-gray-300 rounded-md in-p"
                   placeholder="Email"
                 />
                 <label className="flex items-center space-x-2 pt-4 pb-4 ">
-                  <input type="checkbox" name="offers" className="h-4 w-4" />
+                  <input
+                    type="checkbox"
+                    name="offers"
+                    className="h-4 w-4 email-check"
+                  />
                   <span className="text-sm">Email me with news and offers</span>
                 </label>
               </div>
@@ -105,13 +114,20 @@ const payment = () => {
               <div className="text-black mb-3 input-heading">DELIVERY</div>
 
               {/* Country/Region Section */}
-              <div className="flex flex-col space-y-2 mb-4">
+              <div className="drop-down-div flex flex-col space-y-2 mb-4">
+                <span className="country-span text-gray-400 text-[12px]">
+                  Country/Region
+                </span>
+
                 <select
                   id="country"
                   name="country"
-                  className="border border-gray-300 rounded-md p-2 w-full"
+                  className="border border-gray-300 rounded-md  w-full select-tag text-sm"
                 >
-                  <option value="united-kingdom"> United Kingdom</option>
+                  <option value="united-kingdom" className="text-sm">
+                    {" "}
+                    United Kingdom
+                  </option>
                   {/* Add more options as needed */}
                 </select>
               </div>
@@ -123,7 +139,7 @@ const payment = () => {
                     type="text"
                     id="firstName"
                     name="firstName"
-                    className="border border-gray-300 rounded-md p-2 w-full"
+                    className="border border-gray-300 in-p rounded-md "
                     placeholder="First name"
                   />
                 </div>
@@ -132,7 +148,7 @@ const payment = () => {
                     type="text"
                     id="lastName"
                     name="lastName"
-                    className="border border-gray-300 rounded-md p-2 w-full"
+                    className="border border-gray-300  in-p rounded-md "
                     placeholder="Last name"
                   />
                 </div>
@@ -144,7 +160,7 @@ const payment = () => {
                   type="text"
                   id="company"
                   name="company"
-                  className="border border-gray-300 rounded-md p-2 w-full"
+                  className="border border-gray-300  in-p rounded-md "
                   placeholder="Company (optional)"
                 />
               </div>
@@ -155,7 +171,7 @@ const payment = () => {
                   type="text"
                   id="address"
                   name="address"
-                  className="border border-gray-300 rounded-md p-2 w-full"
+                  className="border border-gray-300  in-p rounded-md "
                   placeholder="Address"
                 />
               </div>
@@ -166,7 +182,7 @@ const payment = () => {
                   type="text"
                   id="apartment"
                   name="apartment"
-                  className="border border-gray-300 rounded-md p-2 w-full"
+                  className="border border-gray-300  in-p rounded-md "
                   placeholder="Apartment, suite, etc. (optional)"
                 />
               </div>
@@ -178,7 +194,7 @@ const payment = () => {
                     type="text"
                     id="city"
                     name="city"
-                    className="border border-gray-300 rounded-md p-2 w-full"
+                    className="border border-gray-300  in-p rounded-md "
                     placeholder="City"
                   />
                 </div>
@@ -187,7 +203,7 @@ const payment = () => {
                     type="text"
                     id="postcode"
                     name="postcode"
-                    className="border border-gray-300 rounded-md p-2 w-full"
+                    className="border border-gray-300  in-p rounded-md "
                     placeholder="Postcode"
                   />
                 </div>
@@ -199,14 +215,14 @@ const payment = () => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="border border-gray-300 rounded-md p-2 w-full"
+                  className="border border-gray-300  in-p rounded-md "
                   placeholder="Phone"
                 />
               </div>
 
               {/* News and Offers Section */}
-              <div className="flex items-center space-x-2 mb-4">
-                <input type="checkbox" className="h-4 w-4" />
+              <div className="flex items-center space-x-2 mb-4 border border-gray-300 p-2 rounded-md">
+                <input type="checkbox" className="border-gray-100 h-4 w-4" />
                 <span className="text-sm">Text me with news and offers</span>
               </div>
 
@@ -318,12 +334,86 @@ const payment = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="input-heading text-black text-[1rem] mt-4">
+                    REMEMBER ME
+                  </div>
+                  <div className="flex flex-wrap flex-col items-start justify-center mb-4 border border-gray-300 pt-[17px] rounded-md ">
+                    <div className="flex items-center space-x-2 mb-4 ps-[17px] pe-[17px]">
+                      <input
+                        type="checkbox"
+                        className="border-gray-100 h-4 w-4"
+                      />
+                      <span className="text-[13px]">
+                        Save my information for a faster checkout
+                      </span>
+                    </div>
+                    <div className="flex flex-col bg-gray mobile-phone-div pt-5 pb-4 ">
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        className="border ms-[17px] me-[17px] border-gray-300 w-[545px] in-p  mobile-phone-input rounded-md pl-5 "
+                        placeholder="Mobile phone number"
+                      />
+                      <Image
+                        className="phoneImage"
+                        src={phoneImage}
+                        alt="phoneImage"
+                      ></Image>
+                      <div className="ps-5 pe-5">
+                        <p className="text-red text-[13px] pt-3">
+                          The specified phone number does not match the expected
+                          pattern.
+                        </p>
+                        <p className="text-gray-500 text-[13px] pt-4 pe-5">
+                          Next time you check out here or on other stores
+                          powered by Shopify, you’ll receive a code by text
+                          message to securely purchase with Shop Pay.
+                        </p>
+                        <p className="text-gray-500 text-[12px] pt-5 flex felx-wrap ">
+                          By continuing, you agree to Shop Pay’s&nbsp;
+                          <a href="#" className="flex items-center gap-1">
+                            <ins>Privacy Policy</ins>
+                            <Image src={shareSymbol} alt="shareSymbol"></Image>
+                          </a>
+                          &nbsp; and &nbsp;
+                          <a href="#" className="flex items-center gap-1">
+                            <ins>Terms of Service</ins>
+                            <span>
+                              <Image
+                                src={shareSymbol}
+                                alt="shareSymbol"
+                              ></Image>
+                            </span>
+                          </a>
+                          .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between  items-center">
+                    <div className="flex justify-start gap-2 items-center">
+                      <Image src={locksymbol} alt="locksymbol"></Image>
+                      <span className="text-xs">Secure and encrypted</span>
+                    </div>
+                    <Image src={shopImg} alt="shopImg"></Image>
+                  </div>
                 </div>
 
                 {/* PayPal Button Section */}
                 <div className="mt-6">
-                  <button className="bg-blue-600 text-white py-3 px-6 rounded-md w-full text-lg font-semibold">
-                    Pay with PayPal
+                  <button className="paypal-btn text-white py-4 px-6 rounded-md w-full text-lg flex flex-wrap justify-center items-center ">
+                    <span>Pay with &nbsp; </span>
+                    <span>
+                      <Image
+                        src={paypalWhite}
+                        alt="paypal"
+                        className="paypalWhite"
+                      ></Image>
+                    </span>
+                  </button>
+                  <button className="review-order-btn text-white py-4 px-6 rounded-md w-full text-lg ">
+                    Review order
                   </button>
                 </div>
               </div>
@@ -346,25 +436,28 @@ const payment = () => {
           <div className="checkout-main w-[604px] ">
             <div className="p-[38px] checkout-inside">
               {/* Product Summary Section */}
-              <div className="flex space-x-4 ">
+              <div className="flex space-x-4 items-center ">
                 {/* Product Image */}
-                <div className="w-16 h-16">
+                <div className="buy-img-div w-16 h-16">
                   {/* Add your image here */}
                   <Image
                     src={cartimg}
                     alt="Product Image"
-                    className="w-full h-full object-cover rounded-md"
+                    className="w-full h-full img-border object-cover rounded-md"
                   />
+                  <div className="num-circle">
+                    <span>1</span>
+                  </div>
                 </div>
                 {/* Product Details */}
                 <div className="flex-1">
-                  <div className="text-sm font-semibold">
+                  <p className="text-sm font-normal">
                     Tenacity Deep V Cady Bra - Heat
-                  </div>
-                  <div className="text-gray-500 text-xs">M</div>
+                  </p>
+                  <span className="text-gray-500 font-light text-xs">M</span>
                 </div>
                 {/* Product Price */}
-                <div className="text-sm font-semibold">£36.00</div>
+                <div className="text-sm font-normal">£36.00</div>
               </div>
 
               {/* Rewards Reminder Section */}
@@ -386,7 +479,7 @@ const payment = () => {
                     ></path>
                   </svg> */}
                   <Image src={isymbol} alt="isymbol"></Image>
-                  <span className="text-[15px]">
+                  <span className="text-sm">
                     Don&apos;t miss out!{" "}
                     <a href="#" className="text-blue-600 link">
                       Log in
@@ -397,33 +490,32 @@ const payment = () => {
               </div>
 
               {/* Discount Code Section */}
-              <div className="flex space-x-2 mt-4">
+              <div className="flex gap-3 mt-4">
                 <input
                   type="text"
                   placeholder="Discount code or gift card"
-                  className="border border-gray-300 p-2 rounded-md w-full"
+                  className="border border-gray-300 p-2 rounded-md w-full discount-input"
                 />
-                <button className="bg-gray-200 text-gray-600 px-4 rounded-md">
+                <button className="text-sm px-4 rounded-md apply-btn">
                   APPLY
                 </button>
               </div>
 
               {/* Subtotal Section */}
               <div className="flex justify-between items-center mt-4">
-                <span className="text-gray-600">Subtotal</span>
-                <span className="font-semibold">£36.00</span>
+                <span className="text-sm">Subtotal</span>
+                <span className="text-sm">£36.00</span>
               </div>
 
               {/* Shipping Section */}
               <div className="flex justify-between items-center mt-2">
-                <span className="text-gray-600">Shipping</span>
-                <span className="text-sm text-gray-500">
+                <span className="text-sm">Shipping</span>
+                <span className="text-xs text-gray-400">
                   Enter shipping address
                 </span>
               </div>
-
               {/* Total Section */}
-              <div className="flex justify-between items-center mt-4 border-t pt-4">
+              <div className="flex justify-between items-center mt-4 ">
                 <span className="font-semibold text-lg">Total</span>
                 <div className="text-lg font-semibold text-gray-900 flex items-center">
                   <span className="text-xs font-normal text-gray-500 mr-2">
@@ -434,7 +526,7 @@ const payment = () => {
               </div>
 
               {/* Tax Information Section */}
-              <div className="mt-2 text-sm text-gray-500">
+              <div className="mt-2 text-xs text-gray-500">
                 Including £6.00 in taxes
               </div>
             </div>
